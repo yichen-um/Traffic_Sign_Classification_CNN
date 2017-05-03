@@ -1,9 +1,5 @@
 #**Traffic Sign Recognition** 
 
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Build a Traffic Sign Recognition Project**
@@ -19,14 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./examples/DataSetVisual "Visualization"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -40,20 +29,23 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 ###Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+####1. Summary of the data set. 
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of the validation set is 4410
+* The size of test set is 12630
+* The shape of a traffic sign image is square consist of 32 by 32 pixels
+* The number of unique classes (labels) in the data set is 43, including training, validation and testing data set
 
-####2. Include an exploratory visualization of the dataset.
+####2. Exploratory visualization of the dataset.
+Below is a depict of examples randomly selected from each class in the training data. Notice that lighting condition, the orientation of the traffic sign and the background has varies. 
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+![alt text][image2]
+
+Here is an exploratory visualization of the data set. It is a bar chart showing how the number of examples are distributed among different classes.
 
 ![alt text][image1]
 
@@ -61,7 +53,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+Several computer vision techniques are used to pre-process the image, including applying gamma correction to increase the brightness of the pictures, histogram equalization to normalize the contrast and brightness, and convert the image to grayscale and normalize the pixel values between 0 to 1. The grayscaling of the images reduces the parameters need to be trained without sacrifysing accuracy [LeCun, 2012]
 
 Here is an example of a traffic sign image before and after grayscaling.
 
