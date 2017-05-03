@@ -59,17 +59,18 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-As a last step, I normalized the image data because ...
+Since there is a large discrepancy in the distributions of examples among training set, therefore it is necessary to generate additional data.
 
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
+To add more data to the the data set, few steps are taken. 
+a. The class under represented are selected, and a number of compensation is calculate 
+b. Examples are randomly selected from under represented class
+c. Additional data are produced by rotating selected examples by -15 to 15 degree
 
 Here is an example of an original image and an augmented image:
 
 ![alt text][image3]
 
-The difference between the original data set and the augmented data set is the following ... 
+The difference between the original data set and the augmented data set is the following:
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -78,11 +79,14 @@ My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Input         		| 32x32x1 Grayscale image   							| 
+| Convolution 3x3     	| 5x5 stride, valid padding, outputs 32x32x64 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
+| Convolution 3x3	    | 5x5 stride, valid padding, outputs 32x32x64   |
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
+| Fully connected		| etc.        									|
 | Fully connected		| etc.        									|
 | Softmax				| etc.        									|
 |						|												|
