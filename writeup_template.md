@@ -44,7 +44,7 @@ Below is a depict of examples randomly selected from each class in the training 
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the number of examples are distributed among different classes.
 
-![alt text][image1]
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/DataSetVisual.png)
 
 ###Design and Test a Model Architecture
 
