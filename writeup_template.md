@@ -61,6 +61,7 @@ The distribution of the original data set and the augmented data set are shown b
 The first architecture was chosen as the LeNet, which was provided in the Udacity material. The initial validation accuracy was decent but not enough for 93 % threshold due to its insufficent parameters. During iteratively tuning process, a more sophisticated network given above was adopted with more layers and weighting parameters. After the augmented data added into the data set, the training process became longer and the validation accuracy is improved. 
 
 The final model consisted of the following layers:
+
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 Grayscale image   							| 
@@ -100,6 +101,7 @@ The first image might be difficult to classify because ...
 
 ### 4.2. Discussion on prediction of new testing images
 Here are the results of the prediction:
+
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Priority road      		| Priority road   									| 
@@ -111,6 +113,7 @@ Here are the results of the prediction:
 | Ahead only	      		| Aheadd only					 				|
 | Keep right	      		| Keep right					 				|
 | Vehicles over 3.5 metric tons prohibited	      		| Vehicles over 3.5 metric tons prohibited					 				|
+
 For demonstrative purpose, the model is able to correctly guess 9 of the 9 traffic signs, which gives an accuracy of 100 %. This compares favorably to the accuracy on the test set of 91.9 %.
 
 ### 4.3. Top 5 predictions
