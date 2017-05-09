@@ -85,10 +85,8 @@ The final model consisted of the following layers:
 | Softmax				| etc.        									|
 |						|												|
 |						|												|
- 
 
-
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+####3. Description of meodel training
 
 The model was trained via  an amazon EC2 GPU instance. The optimizer is chose to be Adam Optimizer, dropout technique is used to prevent overfitting. Below is the parameters used in training:
 
@@ -98,7 +96,7 @@ The model was trained via  an amazon EC2 GPU instance. The optimizer is chose to
 * ipochs = 40
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93.
-My final model results were:
+The final model results are:
 * training set accuracy of ?
 * validation set accuracy of ? 
 * test set accuracy of ?
