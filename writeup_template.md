@@ -131,7 +131,7 @@ Here are the results of the prediction:
 | 100 km/h	      		| Bumpy Road					 				|
 | Slippery Road			| Slippery Road      							|
 
-![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/TopKDemo.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/TopKDemo.png)
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
