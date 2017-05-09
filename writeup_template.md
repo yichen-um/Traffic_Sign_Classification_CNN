@@ -63,9 +63,9 @@ Here is an example of an original image and an augmented image:
 
 The distribution of the original data set and the augmented data set are shown below:
 
-![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugTrainDist.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugTrainDist.png)
 
-![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugValidDist.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugValidDist.png)
 
 ####2. Description of final model architecture
 
@@ -105,7 +105,7 @@ The final model results are:
 * test set accuracy of ?
 
 The accuracy and loss of training and validation are shown below. 
-![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/TrainingHistory.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/TrainingHistory.png)
 
 
 ###Test a Model on New Images
