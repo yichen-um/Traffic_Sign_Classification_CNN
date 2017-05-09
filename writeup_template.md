@@ -67,7 +67,9 @@ The distribution of the original data set and the augmented data set are shown b
 
 ![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugValidDist.png)
 
-####2. Description of final model architecturewhat
+####2. Description of final model architecture
+
+The first architecture was chosen as the LeNet, which was provided in the Udacity material. The initial validation accuracy was decent but not enough for 93 % threshold due to its insufficent parameters. During iteratively tuning process, a more sophisticated network given above was adopted with more layers and weighting parameters. After the augmented data added into the data set, the training process became longer and the validation accuracy is improved. 
 
 The final model consisted of the following layers:
 
@@ -97,13 +99,14 @@ The model was trained via  an amazon EC2 GPU instance. The optimizer is chose to
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93.
 The final model results are:
+* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 * training set accuracy of ?
 * validation set accuracy of ? 
 * test set accuracy of ?
 
-The first architecture was chosen as the LeNet, which was provided in the Udacity material. The initial validation accuracy was decent but not enough for 93 % threshold due to its insufficent parameters. During iteratively tuning process, a more sophisticated network given above was adopted with more layers and weighting parameters. After the augmented data added into the data set, the training process became longer and the validation accuracy is improved. 
+The accuracy and loss of training and validation are shown below. 
+![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/TrainingHistory.png)
 
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 
 ###Test a Model on New Images
 
@@ -128,6 +131,7 @@ Here are the results of the prediction:
 | 100 km/h	      		| Bumpy Road					 				|
 | Slippery Road			| Slippery Road      							|
 
+![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/TopKDemo.png)
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
