@@ -1,16 +1,13 @@
 # Traffic Sign Recognition
 ---
 ## 1. Overview of Project
-This project aims to build a classifier that is able to classify traffic sign with advanced computer vision technique and deep neural net work model. The classifier is trained, validated and tested with over hundreds of thousands of picture of German traffic signs among 43 classes. [data set](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). The entire code regarding the project can be found via this link [project code](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/Traffic_Sign_Classifier.ipynb)
+This project aims to build a classifier that is able to classify traffic sign with advanced computer vision technique and deep neural net work model. The classifier is trained, validated and tested with over hundreds of thousands of examples among 43 classes of traffic signs from the data base of German Traffic Signs Recognition Benchmark [(GTSRB)](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). The code for the project can be found [here](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/Traffic_Sign_Classifier.ipynb)
 
-The steps of this project are the following:
-* Load the data set (see below for links to the project data set)
+This project includes the following procedures:
 * Explore, summarize and visualize the data set
-* Augment data to balance class distribution and adding robust of model
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
+* Augment data to balance distribution of training and validation data set
+* Design, train and test a deep neural net work model
+* Use the model to make predictions on new images and analyze the softmax probabilities
 ---
 ## 2. Data Set Summary & Exploration
 ### 2.1. Summary of the data set. 
