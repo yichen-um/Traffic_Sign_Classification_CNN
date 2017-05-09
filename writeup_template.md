@@ -12,17 +12,10 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/DataSetVisual "Visualization"
-
 ---
 ###Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+This file provides a description to a computer vision project to classify traffic sign. The entire code can be found via this link [project code](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ###Data Set Summary & Exploration
 
@@ -40,9 +33,9 @@ signs data set:
 ####2. Exploratory visualization of the dataset.
 Below is a depict of examples randomly selected from each class in the training data. Notice that lighting condition, the orientation of the traffic sign and the background has varies. 
 
-![alt text][image2]
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/DataSetExamples.png)
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the number of examples are distributed among different classes.
+To visualize the data set, a bar chart showing how the number of examples are distributed among different classes is given as below
 
 ![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/DataSetVisual.png)
 
@@ -52,23 +45,27 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 Several computer vision techniques are used to pre-process the image, including applying gamma correction to increase the brightness of the pictures, histogram equalization to normalize the contrast and brightness, and convert the image to grayscale and normalize the pixel values between 0 to 1. The grayscaling of the images reduces the parameters need to be trained without sacrifysing accuracy [LeCun, 2012]
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here are two examples of traffic sign images before and after pre-processing.
 
-![alt text][image2]
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/preProcessDemo8150.png)
 
-Since there is a large discrepancy in the distributions of examples among training set, therefore it is necessary to generate additional data.
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/preProcessDemo8109.png)
 
-To add more data to the the data set, few steps are taken. 
-a. The class under represented are selected, and a number of compensation is calculate 
+In order to train a classifier that is robust in classify all types of traffic signs, the discrepancy in the distributions of examples among the training and validation set are compensated by generating augmented data. Specifically, the following processing steps are taken
+
+a. The class under represented are selected, and a number of compensation is calculate
 b. Examples are randomly selected from under represented class
 c. Additional data are produced by rotating selected examples by -15 to 15 degree
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugDataDemo.png)
 
-The difference between the original data set and the augmented data set is the following:
+The distribution of the original data set and the augmented data set are shown below:
 
+![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugTrainDist.png)
+
+![alt text] (https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugValidDist.png)
 
 ####2. Description of final model architecturewhat
 
