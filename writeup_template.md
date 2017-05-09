@@ -1,7 +1,6 @@
 #**Traffic Sign Recognition** 
 
 ---
-
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -11,13 +10,12 @@ The goals / steps of this project are the following:
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
-
 ---
-###Writeup / README
+##Writeup / README
 
 This file provides a description to a computer vision project to classify traffic sign. The entire code can be found via this link [project code](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+##Data Set Summary & Exploration
 
 ####1. Summary of the data set. 
 
