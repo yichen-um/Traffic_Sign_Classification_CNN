@@ -23,11 +23,11 @@ signs data set:
 ### 2.2. Exploratory visualization of the dataset.
 Below is a depict of examples randomly selected from each class in the training data. Notice that lighting condition, the orientation of the traffic sign and the background has varies.
 
-![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/DataSetExamples.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/DataSetVisual.png)
 
 To visualize the data set, a bar chart showing how the number of examples are distributed among different classes is given as below
 
-![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/DataSetVisual.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/DataSetDistribution.png)
 
 ## 3. Design and Test a Model Architecture
 ### 3.1. Description of pre-processing 
@@ -44,12 +44,12 @@ In order to train a classifier that is robust in classify all types of traffic s
 * Additional data are produced by rotating selected examples by -15 to 15 degree
 Here is an example of an original image and an augmented image:
 
-![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugDataDemo.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugDemo7991.png)
 
 The distribution of the original data set and the augmented data set are shown below:
 
 ![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugTrainDist.png)
-![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugValidDist.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugTestDist.png)
 
 * The size of training set is 74217
 * The size of the validation set is 9390
