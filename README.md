@@ -39,21 +39,20 @@ Here are two examples of traffic sign images before and after pre-processing.
 
 ### 3.2. Description of data augmentation
 In order to train a classifier that is robust in classify all types of traffic signs, the discrepancy in the distributions of examples among the training and validation set are compensated by generating augmented data. Specifically, the following processing steps are taken
-* The class under represented are selected, and a number of compensation is calculate
-* Examples are randomly selected from under represented class
-* Additional data are produced by rotating selected examples by -15 to 15 degree
+* Combine the original training and validation data set
+* Select the classes underrepresented in terms of number of examples
+* Add additional data for the underrepresented by rotating randomly selected examples by -5 to 5 degree
 Here is an example of an original image and an augmented image:
 
 ![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugDemo7991.png)
 
-The distribution of the original data set and the augmented data set are shown below:
+The distribution of the augmented data set are shown below:
 
-![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugTrainDist.png)
-![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugTestDist.png)
+![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/AugDataDist.png)
 
-* The size of training set is 74217
-* The size of the validation set is 9390
-* The size of test set is 12630
+* The size of augmented training set is 46510
+* The size of augmented validation set is 11628
+* The test set is not augmented and the size remains 12630
 ### 3.3. Description of final model architecture
 The first architecture was chosen as the LeNet, which was provided in the Udacity material. The initial validation accuracy was decent but not enough for 93 % threshold due to its insufficent parameters. During iteratively tuning process, a more sophisticated network given above was adopted with more layers and weighting parameters. After the augmented data added into the data set, the training process became longer and the validation accuracy is improved. 
 
@@ -62,30 +61,32 @@ The final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 Grayscale image   							| 
-| Convolution 3x3     	| 5x5 stride, valid padding, outputs 32x32x64 	|
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x70 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | 5x5 stride, valid padding, outputs 32x32x64   |
+| Max pooling	2x2      	| 2x2 stride,  outputs 14x14x70 				|
+| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x140   |
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Fully connected		| etc.        									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
+| Max pooling	2x2      	| 2x2 stride,  outputs 5x5x140 				|
+| Convolution 3x3	    | 1x1 stride, valid padding, outputs 3x3x210   |
+| RELU					|												|
+| Fully connected		| outputs 1890x1        									|
+| Fully connected		| outputs 300x1        									|
+| Softmax				| outputs 43x1        									|
 
 ### 3.4. Description of model training and tuning of hyper-parameter
 The model was trained via  an amazon EC2 GPU instance. The optimizer is chose to be Adam Optimizer, dropout technique is used to prevent overfitting. Below is the parameters used in training:
-* leanring rate = 0.0005
+* leanring rate = 0.00001
 * batch size = 128
-* drop rate = 50 %
-* ipochs = 40
+* drop rate = 20 %
+* ipochs = 50
 The accuracy and loss of training and validation during the traing process are shown below. We can see that the accuracy on training and validation data set are off by margine of X %, and reaches to steady after X epoch.
 
 ![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/TrainingHistory.png)
 
 The final model results are:
-* training set accuracy = 98.4 %
-* validation set accuracy =  92.7 %
-* test set accuracy = 91.9 %
+* training set accuracy = 96.4 %
+* validation set accuracy =  95.8 %
+* test set accuracy = 92.4 %
 
 ## 4. Test a Model on New Images
 ### 4.1. New testing images
