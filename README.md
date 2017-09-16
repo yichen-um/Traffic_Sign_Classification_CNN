@@ -2,7 +2,7 @@
 # Udacity Self-Driving Car Engineer Nanodegree
 # Project: Traffic Sign Recognition Classifier
 ---
-## 1. Overview of Project
+## 1. Summary of Project
 This project aims to build a classifier that is able to classify traffic sign with advanced computer vision technique and deep neural net work model. The classifier is trained, validated and tested with over hundreds of thousands of examples among 43 classes of traffic signs from the data base of German Traffic Signs Recognition Benchmark [(GTSRB)](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). The code for the project can be found [here](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/Traffic_Sign_Classifier.ipynb). More technical details can be found at in the reference listed as:
 [Sermanet and LeCun, 2011](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf)
 [Ciresan et al., 2012](http://xa.yimg.com/kq/groups/14962965/499730234/name/NN_PAPER.pdf)
