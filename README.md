@@ -1,4 +1,4 @@
-# Project: Traffic Sign Recognition Classifier
+# Project: Traffic Sign Classification
 ### Udacity Self-Driving Car Engineer Nanodegree
 
 ---
