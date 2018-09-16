@@ -1,5 +1,4 @@
-# Project: Traffic Sign Classification
-### Udacity Self-Driving Car Engineer Nanodegree
+# Traffic Sign Classification with Convolutional Neural Networks
 
 ---
 ## 1. Summary of Project
