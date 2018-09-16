@@ -122,4 +122,5 @@ To describe how certain the model is when predicting on each of the new images, 
 
 ![alt text](https://github.com/davidsky900/SelfDrivingCar-TrafficSign/blob/master/examples/TopKDemo.png)
 
-
+### Disclaimer
+The project is part of study of the Nano-degree of Udacity "Self-Driving Car Engineer". The learning material and the data is provided by Udacity, and the key implementation of the project is carried out by Yi Chen.
